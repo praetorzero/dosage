@@ -365,10 +365,5 @@ class Drowtales(_BasicScraper):
     help = 'Index format: number'
 
 
-class DumbingOfAge(_BasicScraper):
+class DumbingOfAge(_WordPressScraper):
     url = 'http://www.dumbingofage.com/'
-    rurl = escape(url)
-    stripUrl = url + '%s/'
-    prevSearch = compile(tagre("a", "href", r'(%s\d+/[^"]+)' % rurl, after="prev"))
-    imageSearch = compile(tagre("img", "src", r'(%scomics/\d+-\d+-\d+[^"]+)' % rurl))
-    help = 'Index format: yyyy/comic/book-num/seriesname/stripname'
