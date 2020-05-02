@@ -8,7 +8,7 @@ from re import compile, escape
 from ..scraper import _BasicScraper, _ParserScraper
 from ..helpers import indirectStarter, bounceStarter, xpath_class
 from ..util import tagre
-from .common import _ComicControlScraper, _WordPressScraper, _WPNaviIn, _WPWebcomic
+from .common import _ComicControlScraper, _WordPressScraper, _WPNavi, _WPNaviIn, _WPWebcomic
 
 
 class Damonk(_BasicScraper):
@@ -365,5 +365,5 @@ class Drowtales(_BasicScraper):
     help = 'Index format: number'
 
 
-class DumbingOfAge(_WordPressScraper):
+class DumbingOfAge(_WPNavi):
     url = 'http://www.dumbingofage.com/'
